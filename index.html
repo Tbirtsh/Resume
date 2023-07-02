@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axel Fedelischak - Resume</title>
+  <style>
+  /* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+h1, h2, h3, h4 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #6a50ff, #00c9ff, #f2fbff);
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Section Styling */
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+section ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section ul li {
+  margin-bottom: 10px;
+}
+
+/* Links */
+a {
+  color: #6a50ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 600px) {
+  header {
+    padding: 10px;
+  }
+
+  section {
+    padding: 10px;
+  }
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Axel Fedelischak</h1>
+    <h2>Web Developer &amp; UX/UI Designer</h2>
+    <p>Ohio</p>
+    <p>Email: axel21127@gmail.com</p>
+
+    </p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I am a motivated and ambitious 14-year-old with a passion for coding in HTML and CSS. While I may not have any professional work experience yet, I am driven to contribute and make a difference in the world. I am currently enrolled at Cuyahoga Falls Middle School and will be attending Cuyahoga Falls High School from 2023 to 2027.</p>
+    <p>I have already been accepted into college classes for software engineering, starting in my freshman year of high school. This opportunity showcases my dedication to learning and my eagerness to develop my skills in programming.</p>
+    <p>One of my ventures includes running a successful lawn mowing business called "A-Z Mowing And More" alongside a friend. This experience has taught me the value of hard work, attention to detail, and effective time management.</p>
+    <p>As an independent worker, I thrive in solo projects, but I am also capable of collaborating effectively within a team. I take pride in my ability to stay focused, set goals, and complete tasks efficiently. In my view, there are few individuals my age who share my level of dedication and determination.</p>
+    <p>When it comes to work, my core values revolve around delivering high-quality results and ensuring tasks are completed accurately to the best of my knowledge. I strive to make a positive impact through my work and contribute to meaningful projects.</p>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <ul>
+      <li>
+        <h3>Cuyahoga Falls High School - Cuyahoga Falls</h3>
+        <p>Aug 2023 - 2027</p>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <ul>
+      <li>Code related: (HTML, CSS)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tools &amp; Softwares</h2>
+    <ul>
+      <li>Design: (Figma, Photoshop)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Light Mode</h2>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle" checked>
+      <span class="slider"></span>
+    </label>
+  </section>
+  
+  <style>
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      transition: background-color 0.3s ease;
+    }
+  
+    .dark-mode {
+      background-color: #0F172A;
+      color: #f9f9f9;
+    }
+  
+    .dark-mode section {
+      background-color: #0F172A;
+      color: #f9f9f9;
+    }
+  
+    .dark-mode h2 {
+      color: #f9f9f9;
+    }
+  
+    .dark-mode .switch {
+      background-color: #555;
+    }
+  
+    .dark-mode .slider {
+      background-color: #ccc;
+    }
+  
+    .dark-mode .slider:before {
+      background-color: #fff;
+    }
+  
+    .dark-mode input:checked + .slider {
+      background-color: #2196F3;
+    }
+  
+    .dark-mode input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+  </style>
+  
+  <script>
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+    const sections = document.querySelectorAll('section');
+  
+    darkModeToggle.addEventListener('change', function() {
+      body.classList.toggle('dark-mode');
+      sections.forEach(section => section.classList.toggle('dark-mode'));
+    });
+  </script>
+  
+  
+  
+  
+  
+</body>
+</html>
